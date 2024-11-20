@@ -1,5 +1,5 @@
 # CALIGO
-A 2D platformer game for a 9-day game jam.
+一款以灯和雾为主题的2D平台跳跃游戏.
 
 ---
 # 关于文件夹管理的提示：
