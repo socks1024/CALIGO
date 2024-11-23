@@ -20,10 +20,10 @@
 
 记得在对应目录下上传文件：
 
-* 美术资产提交到`/Asset/Resources/Art`文件夹；
+* 美术资产提交到`/Asset/Resources/Art`；
 * 音乐提交到`/Asset/Resources/Music/BGM`或者`/AssetResources/Music/ME`；
 * 音效提交到`/Asset/Resources/Music/SE`；
-* 设计文档提交到`/Asset/GDD`文件夹。
+* 设计文档提交到`/Asset/GDD`。
 ---
 
 # 从Unity上传/下载：
