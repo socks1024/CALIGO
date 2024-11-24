@@ -9,8 +9,11 @@ public class PlayerMovement : MonoBehaviour
     //private Animator anim;
     private CapsuleCollider2D capsuleCollider;
     
-    [SerializeField] private float jumpForce = 5.0f;
-    [SerializeField] private float walkSpeed = 5.0f;
+    [SerializeField] private float jumpForce = 3.0f;
+    [SerializeField] private float walkSpeed = 3.0f;
+    [SerializeField] private float runSpeed = 5.0f;
+    private float speed;
+
     private float faceDir = 0f;
     
     [SerializeField] private LayerMask jumpableGround = 0;
@@ -23,6 +26,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float fallSpeedLimit = -10.0f;
 
+    [SerializeField] private float staMax = 10.0f;
+    private float stamina;
+
+    [SerializeField] private float runStaCost = 1f;
+    [SerializeField] private float defStaRec = 1f;
+    
+
 
     //[SerializeField] private AudioSource jumpSE;
 
@@ -30,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private enum MovementStates
     {
         IDLE,
+        WALK,
         RUN,
         JUMP,
         FALL,
@@ -42,13 +53,19 @@ public class PlayerMovement : MonoBehaviour
         //anim = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
 
+        speed = walkSpeed;
         coyoteTime = baseCoyoteTime;
+        stamina = staMax;
     }
 
     void Update()
     {
+        UpdateState();
+
         faceDir = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(faceDir * walkSpeed, rb.velocity.y);
+
+        speed = Mathf.Lerp(walkSpeed, runSpeed, stamina / staMax);
+        rb.velocity = new Vector2(faceDir * speed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -61,29 +78,38 @@ public class PlayerMovement : MonoBehaviour
         {
             InAir();
         }
-
-        UpdateState();
-
     }
 
     void UpdateState()
     {
         //MovementStates state;
-
-        if (faceDir > 0)
+        if (Input.GetButtonDown("Run"))
         {
             state = MovementStates.RUN;
-            sprite.flipX = false;
+            stamina -= runStaCost * Time.deltaTime;
         }
-        else if (faceDir < 0)
+        else if (faceDir != 0)
         {
-            state = MovementStates.RUN;
-            sprite.flipX = true;
+            state = MovementStates.WALK;
+            stamina += defStaRec * Time.deltaTime;
+
+            if (faceDir > 0)
+            {
+                sprite.flipX = false;
+            }
+            else if (faceDir < 0)
+            {
+                sprite.flipX = true;
+            }
+
         }
         else
         {
             state = MovementStates.IDLE;
+            stamina += defStaRec * Time.deltaTime;
         }
+
+
 
         if (rb.velocity.y > 0.1f)
         {
@@ -136,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 CoyoteJump();
             }
-        }        
+        }
     }
 
 
