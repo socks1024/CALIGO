@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: "\u573A\u666F"
+  m_Title: "\u6E38\u620F"
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 376.66663
     height: 926
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -1860,9 +1860,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff
+      m_SelectedIDs: 0efaffff
+      m_LastClickedID: -1522
+      m_ExpandedIDs: dcfaffffc071000002720000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2315,14 +2315,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.834318, y: -6.3272204, z: -1.0518413}
+    m_Target: {x: 4.2221384, y: -9.331479, z: 2.5473473}
     speed: 2
-    m_Value: {x: 5.834318, y: -6.3272204, z: -1.0518413}
+    m_Value: {x: 4.2221384, y: -9.331479, z: 2.5473473}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2368,17 +2368,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.17490381, y: -0.0048272805, z: 0.0008574954, w: -0.98457646}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.17490327, y: -0.0048272656, z: 0.00085749273, w: -0.9845734}
   m_Size:
-    m_Target: 7.8499665
+    m_Target: 5.186784
     speed: 2
-    m_Value: 7.8499665
+    m_Value: 5.186784
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1.8200902
     m_SpeedNormalized: 0.9100001
@@ -2514,7 +2514,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Art/Buildings
+    - Packages/com.unity.render-pipelines.universal/Runtime/Materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -2522,16 +2522,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Resources/Art/Buildings
+  - Packages/com.unity.render-pipelines.universal/Runtime/Materials
   m_LastFoldersGridSize: 96
   m_LastProjectPath: D:\UnityProjects\CALIGO
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 49}
-    m_SelectedIDs: 887c0000
-    m_LastClickedID: 31880
-    m_ExpandedIDs: 00000000467c0000487c00004a7c00004c7c00004e7c0000507c0000527c00006a7c0000
+    scrollPos: {x: 0, y: 701}
+    m_SelectedIDs: cc7c0000
+    m_LastClickedID: 31948
+    m_ExpandedIDs: 000000004e7c0000507c0000527c0000547c0000567c0000587c00005a7c0000727c0000907c0000ce7c0000d07c0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2559,7 +2559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000467c0000487c00004a7c00004c7c00004e7c0000507c0000527c0000
+    m_ExpandedIDs: 000000004e7c0000507c0000527c0000547c0000567c0000587c00005a7c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2587,7 +2587,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300009a7100001a7700002c920000d0730000767500000000000078750000849300001271000016710000787200003e7200005c740000527300007a740000987c0000
+    m_ExpandedInstanceIDs: c62300009a7100001a7700002c920000d07300007675000078750000849300001271000016710000787200003e7200005c740000527300007a740000987c00003873000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2690,7 +2690,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 66.66669
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
