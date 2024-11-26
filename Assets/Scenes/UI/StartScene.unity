@@ -450,7 +450,19 @@ MonoBehaviour:
   - eventID: 4
     callback:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 970585481}
+          m_TargetAssemblyTypeName: TestButton, Assembly-CSharp
+          m_MethodName: OnSpriteClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &970585479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -496,6 +508,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.97, y: 0.66}
   m_EdgeRadius: 0
+--- !u!114 &970585481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970585474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f35bcf82cb1314eb12885557e5bcc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
+  pressedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &996396522
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,9 +984,33 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3295267042460037676, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3142847810686672127, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4149323394818175459, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148850567371848528, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148850567371848528, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148850567371848528, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148850567371848528, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -972,6 +1022,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5249595425162652436, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 970585478}
+    - targetCorrespondingSourceObject: {fileID: 5249595425162652436, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 970585481}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 87c52dde3bced2040809dd588c3fd1a1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
