@@ -22,12 +22,16 @@ public class ClimbState : IPlayerMovementState
     {
         this.rb = rb;
         rb.gravityScale = 0f;
+        PlayerManager.Instance.transform.position = 
+            new Vector2(PlayerManager.Instance.ladder.transform.position.x, PlayerManager.Instance.transform.position.y);
+        PlayerManager.Instance.ladder.ChangePlatformCollision(false);
     }
 
     public void Exit()
     {
         rb.gravityScale = 1f;
         PlayerManager.Instance.transform.position = ladder.GetLeavePointPos(PlayerManager.Instance.transform.position);
+        PlayerManager.Instance.ladder.ChangePlatformCollision(true);
     }
 
     public void StateUpdate()

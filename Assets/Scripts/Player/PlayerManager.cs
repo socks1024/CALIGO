@@ -43,7 +43,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public float staLoseSpeed;
 
     private CapsuleCollider2D capsuleCollider;
-    private PlayerMovementStateMachine playerSM;
+    public PlayerMovementStateMachine playerSM;
 
     [SerializeField] private LayerMask jumpableGround = 0;
 
@@ -60,6 +60,8 @@ public class PlayerManager : MonoBehaviour
     {
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         playerSM = GetComponent<PlayerMovementStateMachine>();
+        
+        Stamina = staminaMax;
     }
 
     void Update()
