@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IState
+public interface IPlayerMovementState
 {
+    void StateUpdate();
 
-    void Enter();
+    void Enter(Rigidbody2D rb);
 
     void Exit();
-
-    void Update();
-
 }

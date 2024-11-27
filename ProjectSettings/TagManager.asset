@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2551992043
+    locked: 0
+  - name: Wall
+    uniqueID: 1501189075
+    locked: 0
+  - name: Fog
+    uniqueID: 2726791745
+    locked: 0
+  - name: LightBoard
+    uniqueID: 2655072509
     locked: 0
