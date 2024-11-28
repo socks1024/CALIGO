@@ -8,6 +8,9 @@ public class Room : MonoBehaviour
     //[SerializeField] private GameObject door;
     //private Collider2D doorCollider;
 
+    [SerializeField] private bool isSecret = false;
+
+
     private GameObject walls;
 
     private GameObject front;
@@ -31,6 +34,7 @@ public class Room : MonoBehaviour
         }
     }
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +51,12 @@ public class Room : MonoBehaviour
     public void EnterRoom()
     {
         walls.SetActive(true);
+        
+        if (isSecret)
+        {
+            front.SetActive(false);
+        }
+
         SetFrontLayer("Wall");
         
     }
@@ -54,6 +64,12 @@ public class Room : MonoBehaviour
     public void ExitRoom()
     {
         walls.SetActive(false);
+
+        if (isSecret)
+        {
+            front.SetActive(true);
+        }
+
         SetFrontLayer("Default");
     }
 

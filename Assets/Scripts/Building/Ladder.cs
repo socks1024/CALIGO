@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
+    [SerializeField] private bool isRope = false;
+
     [SerializeField] GameObject[] leavePoints = new GameObject[2];
 
     [SerializeField] GameObject[] platformsThrough;
+
+    
 
     public Vector3 GetLeavePointPos(Vector3 playerPos)
     {
