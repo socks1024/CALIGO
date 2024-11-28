@@ -50,7 +50,7 @@ public class PlayerLight : MonoBehaviour
     #region oil
 
     private float oil = 0.0f;
-    private float Oil
+    public float Oil
     {
         get { return oil; }
         set
@@ -86,6 +86,15 @@ public class PlayerLight : MonoBehaviour
     #region burn property
 
     private bool isBurning = false;
+    private bool IsBurning
+    {
+        get { return isBurning; }
+        set
+        {
+            circleCollider2D.enabled = value;
+            isBurning = value;
+        }
+    }
     private float currBurnPower = 1.0f;
     private float CurrBurnPower
     {
@@ -138,12 +147,12 @@ public class PlayerLight : MonoBehaviour
 
         if (Input.GetButtonDown("Burn") && !isBurning)
         {
-            isBurning = true;
+            IsBurning = true;
         }
 
         if (Input.GetButtonUp("Burn") && isBurning)
         {
-            isBurning = false;
+            IsBurning = false;
         }
 
         if (isBurning && currBurnPower < burnPower)
