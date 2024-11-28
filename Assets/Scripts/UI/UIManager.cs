@@ -14,8 +14,8 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
-    [SerializeField] private Button buttonLeft;
-    [SerializeField] private Button buttonRight;
+    //[SerializeField] private Button buttonLeft;
+    //[SerializeField] private Button buttonRight;
 
     [SerializeField] private SpriteRenderer noteImg;
     [SerializeField] private TextMeshPro noteName;

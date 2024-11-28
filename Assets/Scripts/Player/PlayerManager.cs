@@ -13,7 +13,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    [SerializeField] public float staminaMax;
+    [SerializeField] private PlayerLight playerLight;
+
+    [SerializeField] private float staminaMax;
     private float stamina;
     public float Stamina
     {

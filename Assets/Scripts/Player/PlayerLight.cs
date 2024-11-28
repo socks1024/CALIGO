@@ -13,6 +13,8 @@ public class PlayerLight : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private float followSpeed = 8.0f;
 
+    [SerializeField] private bool isPlayerLight = false;
+
     private float baseLightRadius = 0.0f;
     private float BaseLightRadius
     {
@@ -145,7 +147,7 @@ public class PlayerLight : MonoBehaviour
     {
         #region skill set radius
 
-        if (Input.GetButtonDown("Burn") && !isBurning)
+        if (Input.GetButtonDown("Burn") && !isBurning && isPlayerLight)
         {
             IsBurning = true;
         }
