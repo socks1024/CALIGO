@@ -127,6 +127,11 @@ public class PlayerLight : MonoBehaviour
         BaseColliderRadius = circleCollider2D.radius;
 
         Oil = oilInitialAmount;
+
+        if (isPlayerLight)
+        {
+            circleCollider2D.enabled = true;
+        }
     }
 
     // Update is called once per frame

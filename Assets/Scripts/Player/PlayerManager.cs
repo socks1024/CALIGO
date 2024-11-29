@@ -131,4 +131,9 @@ public class PlayerManager : MonoBehaviour
             canClimb = false;
         }
     }
+
+    public void PlayerDead()
+    {
+
+    }
 }
