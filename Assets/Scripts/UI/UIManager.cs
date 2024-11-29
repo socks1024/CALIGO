@@ -7,11 +7,22 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     private static UIManager instance;
-    public static UIManager Instance { get; private set; }
+    public static UIManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType(typeof(UIManager)) as UIManager;
+            }
+
+            return instance;
+        }
+    }
 
     private void Awake()
     {
-        instance = this;
+        instance = this as UIManager;
     }
 
     //[SerializeField] private Button buttonLeft;
@@ -23,7 +34,16 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshPro noteName;
     [SerializeField] private TextMeshPro noteDescription;
 
-    private List<StoryNote.NoteInfo> noteInfos;
+    public static List<NoteInfo> noteInfos = new List<NoteInfo>();
+
+    public struct NoteInfo
+    {
+        public string noteNameInfo;
+
+        public string noteDescriptionInfo;
+
+        public Sprite noteSpriteInfo;
+    }
 
     private int currPageIndex = 0;
 
@@ -36,43 +56,59 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            root.SetActive(!root.activeInHierarchy);
+            root.SetActive(!root.activeSelf);
+            if (root.activeSelf)
+            {
+                ShowStoryPage(currPageIndex);
+            }
         }
     }
 
-    public void AddStoryPage(StoryNote.NoteInfo noteInfo)
+    public static void AddStoryPage(string name,string description,Sprite sprite)
     {
-        noteInfos.Add(noteInfo);
+        NoteInfo info = new NoteInfo();
+
+        info.noteNameInfo = name;
+        info.noteDescriptionInfo = description;
+        info.noteSpriteInfo = sprite;
+
+        noteInfos.Add(info);
     }
 
     private void ShowStoryPage(int pageIndex)
     {
+        if (noteInfos == null)
+        {
+            return;
+        }
+
         if (pageIndex <= 0)
         {
             pageIndex = 0;
         }
-
-        if (pageIndex >= noteInfos.Count)
+        else if (pageIndex >= noteInfos.Count)
         {
             pageIndex = noteInfos.Count - 1;
         }
 
         if (noteInfos.Count > pageIndex)
         {
-            noteImg.sprite = noteInfos[pageIndex].noteSprite;
-            noteName.text = noteInfos[pageIndex].noteName;
-            noteDescription.text = noteInfos[pageIndex].noteDescription;
+            noteImg.sprite = noteInfos[pageIndex].noteSpriteInfo;
+            noteName.text = noteInfos[pageIndex].noteNameInfo;
+            noteDescription.text = noteInfos[pageIndex].noteDescriptionInfo;
         }
     }
 
     public void StoryPageUp()
     {
-        ShowStoryPage(currPageIndex + 1);
+        currPageIndex += 1;
+        ShowStoryPage(currPageIndex);
     }
 
     public void StoryPageDown()
     {
-        ShowStoryPage(currPageIndex - 1);
+        currPageIndex -= 1;
+        ShowStoryPage(currPageIndex);
     }
 
 
