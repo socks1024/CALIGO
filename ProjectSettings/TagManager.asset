@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ladder
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Fog
   - Light
   - LightBoard
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2551992043
+    locked: 0
+  - name: Enemy
+    uniqueID: 2339553089
     locked: 0
   - name: Wall
     uniqueID: 1501189075
