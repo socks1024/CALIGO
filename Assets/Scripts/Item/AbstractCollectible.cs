@@ -17,7 +17,7 @@ public abstract class AbstractCollectible : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        if (Input.GetButtonDown("Act"))
+        if (Input.GetButtonDown("Act") && isTouching)
         {
             Collect();
         }
