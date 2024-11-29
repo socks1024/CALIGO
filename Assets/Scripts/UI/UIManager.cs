@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     //[SerializeField] private Button buttonLeft;
     //[SerializeField] private Button buttonRight;
 
+    [SerializeField] private GameObject root;
+
     [SerializeField] private SpriteRenderer noteImg;
     [SerializeField] private TextMeshPro noteName;
     [SerializeField] private TextMeshPro noteDescription;
@@ -30,6 +32,13 @@ public class UIManager : MonoBehaviour
         ShowStoryPage(currPageIndex);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            root.SetActive(!root.activeInHierarchy);
+        }
+    }
 
     public void AddStoryPage(StoryNote.NoteInfo noteInfo)
     {
@@ -54,6 +63,16 @@ public class UIManager : MonoBehaviour
             noteName.text = noteInfos[pageIndex].noteName;
             noteDescription.text = noteInfos[pageIndex].noteDescription;
         }
+    }
+
+    public void StoryPageUp()
+    {
+        ShowStoryPage(currPageIndex + 1);
+    }
+
+    public void StoryPageDown()
+    {
+        ShowStoryPage(currPageIndex - 1);
     }
 
 
